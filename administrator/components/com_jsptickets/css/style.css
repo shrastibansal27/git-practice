@@ -1,0 +1,174 @@
+@import url("webfontkit/roboto/stylesheet.css");
+
+/*Common Css*/
+/************CLEARFIX************/
+/*.adminform *, .adminform *:after, .adminform *:before {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 0;margin: 0;}*/
+.clearfix:before, .clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+.roboto-egular{font-family: 'robotoregular';}
+roboto-italic{font-family: 'robotoitalic';}
+roboto-bold{font-family: 'robotobold';}
+
+a.view_log_btn{border: 1px solid silver;text-decoration : none;padding : 4px;background-color:#F9F9F9;}
+
+
+#adminForm .table-scroll{overflow-x:auto;clear:both}
+#adminForm #filter-bar .filtering-selectbox{float:left;}
+#adminForm #filter-bar .filtering-selectbox > div{float:left;display:inline;margin:2px;}
+
+/*CSS ADDED BY VP ON 06 September 2013*/
+/*For Toolbar Custom Buttons Backend*/
+.icon-follow-big{background: url(../images/main_page_icons/follow-icon.png) no-repeat 0 3px;}
+.icon-unfollow-big{background:url(../images/main_page_icons/unfollow.png) no-repeat 0 3px;}
+.icon-jsptickets{background:url(../images/main_page_icons/jsptickets.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+.icon-categorylist{background:url(../images/main_page_icons/category-management-icon.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+.icon-ticketlist{background:url(../images/main_page_icons/ticket-management-icon.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+.icon-statuslist{background:url(../images/main_page_icons/status-management-icon.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+.icon-prioritylist{background:url(../images/main_page_icons/priority-management-icon.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+.icon-ticket-config{background:url(../images/main_page_icons/configuration-icon.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+.icon-ticket-mail{background:url(../images/main_page_icons/mail-settings-icon.png) no-repeat 0 0px;height: 23px;margin: 7px 12px -5px 0 !important;width: 21px;}
+
+/*CSS ADDED BY SAMEER ON 28 August 2013*/
+/*Stats Couonter Tabs*/
+.adminform .dashboard-stat{background: none repeat scroll 0 0 #ECECEC;float: left;margin: 0 4px 20px 0;padding:20px 14px 14px;width: 21%;color:#fff;-webkit-border-radius: 4px;border-radius: 4px;}
+.adminform .dashboard-stat{cursor:pointer;}
+.adminform .dashboard-stat .details .desc{font-size:15px;font-family: robotoregular;}
+.adminform .dashboard-stat .details .number{font-size:25px;font-family: robotoregular;}
+.adminform .dashboard-stat.new-tickets-wrap{background:url(../images/new-ticket-stat.png) no-repeat 95% center #FFB848;}
+.adminform .dashboard-stat.fb-tickets-wrap{background:url(../images/facebook-ticket-stat.png) no-repeat 95% center #4B6BB8;}
+.adminform .dashboard-stat.twitter-tickets-wrap{background:url(../images/twitter-ticket-stat.png) no-repeat 95% center #2CBEE5;}
+.adminform .dashboard-stat.total-tickets-wrap{margin:0;background:url(../images/total-ticket-stat.png) no-repeat 95% center #28B779;}
+
+
+/*Recent Activities & Feeds*/
+/*.adminform .feeds-table{background:#4B6BB8;-webkit-border-radius: 4px 4px 0 0;border-radius: 4px 4px 0 0;}*/
+.adminform .table-head{background:#59595B;-webkit-border-radius: 4px 4px 0 0;border-radius: 4px 4px 0 0;}
+.adminform .table-head.facebook{background:#4B6BB8;}
+.adminform .table-head.twitter{background:#2CBEE5}
+.adminform .table-head.recent-activities{background:#FFB848;}
+.adminform .table-head.nrml-feeds{background:#28B779;}
+.adminform .table-head th{ color: #FFFFFF;font-family: robotoregular;font-size: 15px;font-weight: normal;padding:9px 0 7px 40px ;text-shadow: 1px 1px 1px #696969}
+.adminform .table-head th{background:url(../images/heading-icons.png) no-repeat;}
+.adminform .table-head.facebook th{background-position:0 -3px;}
+.adminform .table-head.twitter th{background-position:0 -43px;}
+.adminform .table-head.recent-activities th{background-position:0 -83px;}
+.adminform .table-head.nrml-feeds th{background-position:0 -123px;}
+.adminform .table-head.comments th{background-position:2px -163px;}
+.adminform .feeds-data,.adminform .recent-activities-data{font-size:12px;border:1px solid #CCC;margin:0 0 2px;border-top:none;height:150px;overflow:hidden;overflow-y:auto;}
+.adminform .feeds-data td,.adminform .recent-activities-data td{border-bottom:1px dotted #ccc;padding:8px 9px;}
+.adminform .fb-feeds,.adminform .twitter-feeds{font-size:12px;border:1px solid #CCC;margin:0 0 2px;border-top:none;height:150px;overflow:hidden;overflow-y:auto;}
+.adminform .fb-feeds td,.adminform .twitter-feeds td{border-bottom:1px dotted #ccc;padding:8px 9px;}
+
+a.create-ticket-btn,div.created-ticket-btn{padding:6px 8px;color:#fff;width:80px;display:block;text-align:center;cursor:pointer;font-size:12px;
+background-color:#ccc;border:1px solid #15a4ef;-webkit-border-radius: 6px;border-radius: 6px;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.52);
+background-color: #15a4ef; /* Old browsers */
+background-image: -moz-linear-gradient(top,  #15a0ed 0%, #207cca 100%, #7db9e8 100%);
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#15a0ed), color-stop(100%,#207cca), color-stop(100%,#7db9e8)); 
+background-image: -webkit-linear-gradient(top,  #15a0ed 0%,#207cca 100%,#7db9e8 100%); 
+background-image: -o-linear-gradient(top,  #15a0ed 0%,#207cca 100%,#7db9e8 100%);
+background-image: -ms-linear-gradient(top,  #15a0ed 0%,#207cca 100%,#7db9e8 100%);
+background-image: linear-gradient(to bottom,  #15a0ed 0%,#207cca 100%,#7db9e8 100%);
+background-repeat:repeat-x;
+border-color:#3AA1D9 rgba(58, 161, 217, 0.06) rgba(27, 113, 147, 0.62);
+-webkit-box-shadow:inset 0 1px 0 rgb(52, 202 , 246), 0 1px 2px rgba(159, 162, 163,1);
+-moz-box-shadow:inset 0 1px 0 rgb(52, 202, 246), 0 1px 2px rgba(159, 162, 163,1);
+box-shadow:inset 0 1px 0 rgb(52, 202, 246), 0 1px 2px rgba(159, 162, 163,1);}
+
+a.create-ticket-btn:hover{text-decoration:none;background:#3795F8;}
+div.created-ticket-btn {cursor:default;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);-moz-opacity: 0.3;-khtml-opacity: 0.3;opacity: 0.3;}
+
+/*Comments*/
+.adminform .comments-table th{color:#fff;padding-left:10px;}
+.adminform .comments-grid{border: 1px solid #CCCCCC;margin: 0 0 2px;border-top:none;height:230px;overflow:hidden;font-size:12px;}
+.adminform .comments-grid .user_comments{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background:#FAFAFA;display:block;float:right;padding:10px;text-align:right;width:80%;margin:10px;-webkit-border-radius: 6px 0 0 6px;border-radius:6px 0 0 6px;
+border:1px solid #EAEAEA;border-right:3px solid #35AA47;}
+.adminform .comments-grid .admin_comments{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:#FAFAFA;display:block;float:left;padding:10px;text-align:left;width:80%;margin:10px;-webkit-border-radius: 0 6px 6px 0;border-radius: 0 6px 6px 0;
+border:1px solid #EAEAEA;border-left:3px solid #DA4A38;}
+.adminform .comments-grid .ticket-comment-break{border:1px dotted #A7A7A7;width:100%;float:left;margin:5px 0;}
+
+/*Configuration*/
+.adminform .jsptickets-sql{width:200px;height:100px;}
+#adminForm .configuration .admintable tr td:nth-child(1){min-width:30%;}
+#adminForm .configuration .admintable tr td label{float:left;}
+#adminForm .configuration .admintable tr td .hastip-notification{}
+#adminForm .configuration .admintable tr td .hastip-notification span{float:left;margin:6px 0 0 5px;}
+#adminForm .configuration .admintable tr td .hastip-notification span a img{display:block;}
+#adminForm .admintable tr td label,#adminForm .adminlist tr td label{float:left;}
+#adminForm .configuration .admintable tr td select{float:left;}
+
+/*Mail*/
+#adminForm .mail .admintable tr td:nth-child(1){min-width:20%;}
+
+#adminForm .adminlist .toggle-editor,#adminForm .admintable .toggle-editor {float:none !important;}/*Toogle Editor Button Float issue*/
+#adminForm .admintable tr td label.label_image{float:none;}
+
+/*CSS Added by Sameer on 25 Feb, 2014*/
+#adminForm table.ticket-table tr td{max-width:250px;}
+#adminForm table.align-left thead th{text-align:left;}
+#adminForm table.ticket-table tbody td,table.adminlist thead th{padding:4px 6px;}
+.adminlist td a.view_log_btn{display:inline-block;}
+
+.stat-new{  background: /* url(../images/new-ticket-stat.png) no-repeat 95% center*/  #28B779 !important;
+  
+  margin: 0 4px 20px 0 !important;
+  padding: 20px 14px 14px !important;
+  color: #fff !important;
+  -webkit-border-radius: 4px !important;
+  border-radius: 4px !important;}
+  
+  .stat-fb{    background: /* url(../images/facebook-ticket-stat.png) no-repeat 95% center */ #4B6BB8 !important;
+  
+  margin: 0 4px 20px 0 !important;
+  padding: 20px 14px 14px !important;
+  color: #fff !important;
+  -webkit-border-radius: 4px !important;
+  border-radius: 4px !important;}
+  
+  .stat-tw{  background: /* url(../images/twitter-ticket-stat.png) no-repeat 95% center */ #2CBEE5 !important;
+  
+  margin: 0 4px 20px 0 !important;
+  padding: 20px 14px 14px !important;
+  color: #fff !important;
+  -webkit-border-radius: 4px !important;
+  border-radius: 4px !important;}
+  
+  .stat-tot{  background: /* url(../images/total-ticket-stat.png) no-repeat 95% center*/  #08C !important;
+  
+  margin: 0 4px 20px 0 !important;
+  padding: 20px 14px 14px !important;
+  color: #fff !important;
+  -webkit-border-radius: 4px !important;
+  border-radius: 4px !important;}
+  
+  .stat-ana{
+  background: #FFB848 !important;
+  color: #fff;
+  
+  }
+  
+  .stat-otd{
+  background: #2CBEE5 !important;
+  color: #fff;
+  
+  }
+   
+   .row{
+     margin-left: 0px !important;
+   }
+   .new-row{width: 46%;margin-left:30px;float: left;border: 1px solid rgb(5, 5, 5);border-radius: 8px;  box-shadow: 6px 6px 11px #CACACA;}
+   
+.desc{text-align: center;text-shadow: 0 1px 1px rgba(255,255,255,0.75);}
+ #dropdownMenu1{  height: 52px;}
+ .col-sm-3 .dropdown .dropdown_new{  top: 50px;}
+ .col-sm-3 .col-dropdown .caret {  border-top: 6px solid #FFF;}
+ .head-tickets{  text-align: center; background-color: rgb(5, 5, 5) !important; color: white;}
+ #adminForm .row .col-md-6 .col-n {border-bottom: 1px solid rgb(0, 0, 0) !important;border:none; background:none;}
+ 
+tspan{font-size:10px !important;}
+ 
+
+
+

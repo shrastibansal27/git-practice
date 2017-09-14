@@ -1,0 +1,345 @@
+/**
+ * JSP Tickets components for Joomla!
+ * JSP Tickets is a Joomla 2.5 and Joomla 3.0 support/tickets extension
+ * developed by Joomla Service Provider Team.
+ * @author      $Author: Ajay Lulia $
+ * @copyright   Joomla Service Provider - 2013
+ * @package     JSP Tickets 1.0
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version     $Id: style.css  $
+ */
+
+#adminForm * {line-height:19px !important ;} 
+
+
+form#adminForm .table-scroll{overflow-x:auto;}/*List Table Scroll */
+
+#adminForm input[type="file"], #adminForm input[type="image"], #adminForm input[type="submit"], #adminForm input[type="reset"],
+#adminForm input[type="button"], #adminForm input[type="radio"], #adminForm input[type="checkbox"]
+{width:auto;}
+#adminForm input,#adminForm textarea,#adminForm .uneditable-input, #adminForm input[type="file"]{width:29%;}
+
+/*Black Button*/
+#adminForm button.black-btn{background:url(../images/black-btn-bg.png) repeat-x #060606 !important;border:1px solid #020202;cursor:pointer;color:#fff;padding:2px 8px 3px !important;}
+#adminForm a.black-btn{background:url(../images/black-btn-bg.png) repeat-x #060606 !important;border:1px solid #020202;padding:6px 8px 5px;margin:0 0 0 3px;color:#fff !important;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;cursor:pointer;font-family: arial;font-size: 12px !important;height:auto;}
+#adminForm input.black-btn{background:url(../images/black-btn-bg.png) repeat-x #060606 !important;border:1px solid #020202;padding:5px 8px;margin:0 0 0 3px;color:#fff !important;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;cursor:pointer;font-family: arial;font-size: 12px !important;height:auto;}
+#adminForm input.black-btn:hover,#adminForm a.black-btn:hover{background:#060606 !important;}
+
+
+
+/*Orange Button*/
+#adminForm a.orange-btn{background:url(../images/orange-btn-bg.png) repeat-x #bf2b20 !important;border:1px solid #bf2b20;padding:6px 8px 5px;margin:0 0 0 3px;color:#fff !important;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;cursor:pointer;font-family: arial;font-size: 12px !important;height:auto;}
+#adminForm input.orange-btn{background:url(../images/orange-btn-bg.png) repeat-x #bf2b20 !important;border:1px solid #bf2b20;padding:5px 8px;margin:0 0 0 3px;color:#fff !important;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;cursor:pointer;font-family: arial;font-size: 12px !important;height:auto;}
+#adminForm input.orange-btn:hover,#adminForm a.orange-btn:hover{background:#bf2b20 !important;}
+
+/****************/
+ 
+ 
+a.jsptickets_view_log_btn{border: 1px solid silver;text-decoration : none;padding : 4px;background-color:#F9F9F9;}
+a.jsptickets_toolbars_a{border: 1px solid silver;text-decoration : none;padding : 4px;background-color:#F9F9F9;}
+a.jsptickets_toolbars_btn{}
+
+/*Css Added by Sameer on 2nd September 2013*/
+/*Toolbar Grid*/
+#adminForm .jsptickets_toolbar_grid{margin:0 0 10px;float:right;}
+#adminForm .jsptickets_toolbar_grid td,#adminForm .jsptickets_toolbar_grid tr{border:none;}
+
+#adminForm .jsptickets_toolbar_grid .btn-grid{float:left;}
+#adminForm .jsptickets_toolbar_grid_togglebtn{display:none;cursor:pointer}
+#adminForm .jsptickets_toolbar_grid.form{float:right;}
+
+
+
+
+
+/*Tickets Table*/
+#adminForm .jsptickets_table{font-size:12px;width:100%;}
+#adminForm .jsptickets_table tr{}
+#adminForm .jsptickets_table tr th{padding:4px;}
+#adminForm .jsptickets_table tr th a{padding:0 10px 0 0;}
+#adminForm .jsptickets_table tbody tr td{padding:8px 4px;background: #ffffff; /* Old browsers */
+/*background: -moz-linear-gradient(top,  #ffffff 0%, #f9f9f9 100%);*/ /* FF3.6+ */
+/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f9f9f9));*/ /* Chrome,Safari4+ */
+/*background: -webkit-linear-gradient(top,  #ffffff 0%,#f9f9f9 100%);*/ /* Chrome10+,Safari5.1+ */
+/*background: -o-linear-gradient(top,  #ffffff 0%,#f9f9f9 100%); */    /* Opera 11.10+ */
+/*background: -ms-linear-gradient(top,  #ffffff 0%,#f9f9f9 100%);*/ /* IE10+ */
+/*background: linear-gradient(to bottom,  #ffffff 0%,#f9f9f9 100%);*/ /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+border-bottom:1px solid #ececec !important;}
+#adminForm .jsptickets_table tbody tr:hover td{background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #ededed 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#ededed 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#ededed 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#ededed 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+cursor:pointer;}
+#adminForm .jsptickets_table tfoot tr td{padding:8px 25px;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;
+/*background: #d3d3d3;  
+background: -moz-linear-gradient(top,  #d3d3d3 0%, #c3c3c3 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#c3c3c3)); 
+background: -webkit-linear-gradient(top,  #d3d3d3 0%,#c3c3c3 100%); 
+background: -o-linear-gradient(top,  #d3d3d3 0%,#c3c3c3 100%); 
+background: -ms-linear-gradient(top,  #d3d3d3 0%,#c3c3c3 100%); 
+background: linear-gradient(to bottom,  #d3d3d3 0%,#c3c3c3 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#c3c3c3',GradientType=0 );  */
+}
+#adminForm .jsptickets_table tfoot tr td .limit{float:left;}
+#adminForm .jsptickets_table tfoot tr td .limit select{background:#fdfaf2;height:24px;border:1px solid #e4e4e4;width:50px;margin:0 0 0 5px;}
+#adminForm .jsptickets_table tfoot tr td ul{list-style:none;float:left;margin:0 10px;padding:0;}
+#adminForm .jsptickets_table tfoot tr td ul li{display:inline;}
+#adminForm .jsptickets_table tfoot tr td .counter{float:left;line-height: 1.7em;}
+#adminForm .jsptickets_table tr td a,
+#adminForm .jsptickets_table tr td a:hover,
+#adminForm .jsptickets_table tr td a:visited,
+#adminForm .jsptickets_table tr td a:focus{color:#3399ff;background:none;font-weight:normal;text-decoration:none;}
+#adminForm .jsptickets_table tr td,#adminForm .jsptickets_table tr{border:none;}
+#adminForm .jsptickets_table tr th{border-bottom:1px solid #ececec; vertical-align:middle !important;}
+#adminForm .jsptickets_table tr th a,
+#adminForm .jsptickets_table tr th a:hover,
+#adminForm .jsptickets_table tr th a:visited,
+/*#adminForm .jsptickets_table tr th a:focus{color: #FDFDFD;background:none;font-weight:normal;text-decoration:none;}*/
+
+ /*  .table-scroll .jsptickets_table thead{ background: linear-gradient(to bottom,#5bc0de,#2f96b4) !important;}   
+#adminForm .jsptickets_table tfoot tr td {background: linear-gradient(to bottom,#5bc0de,#2f96b4) !important;}*/
+
+/*Filter Search*/
+#adminForm .jsptickets_filter_fieldset{}
+#adminForm .jsptickets_filter_fieldset .filter-search{float:left;}
+#adminForm .jsptickets_filter_fieldset .filter-search *{display:inline}
+#adminForm .jsptickets_filter_fieldset .filter-search .btn.black
+{padding:4px 6px;margin:0 0 0 5px;color:#fff;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;cursor:pointer;
+background:url(../images/black-btn-bg.png) repeat-x #060606;border:1px solid #020202;}
+#adminForm .jsptickets_filter_fieldset .filter-search input[type=text]{background:#fdfaf2;border:1px solid #e4e4e4;width:140px;padding:5px;height:auto;margin:0;}
+#adminForm .jsptickets_filter_fieldset .filter-select{float:left;}
+#adminForm .jsptickets_filter_fieldset .filter-select select{background:#fdfaf2;border:1px solid #e4e4e4;width:140px;padding:5px;}
+
+
+/*Form*/
+#adminForm .current{background:none;border:none;padding:10px;}
+#adminForm dl.tabs{margin:0;height:27px;border-bottom:3px solid #ededee;width:100%;clear: both;float: none;z-index: 50;}
+#adminForm dl.tabs dt{border:none;background:none;font-size:15px;margin:0 10px 0 0;color: #666666;float: left;padding: 4px 10px;}
+#adminForm dl.tabs dt:hover{border-bottom:3px solid #3399ff;color:#3399ff;}
+#adminForm dl.tabs dt.open{border-bottom:3px solid #3399ff;color:#3399ff;}
+#adminForm .jsptickets_form_table{font-size:12px;width:100%;border: 1px solid #ececec;}
+#adminForm .jsptickets_form_table > tbody > tr > td,
+#adminForm .jsptickets_form_table > tbody > tr,
+#adminForm .jsptickets_form_table > thead > tr,
+#adminForm .jsptickets_form_table > tfoot > tr,
+#adminForm .jsptickets_form_table > tfoot > tr > td{border:none;}
+#adminForm .jsptickets_form_table > thead > tr > th{padding:10px 4px;border-bottom:2px solid #ececec !important;}
+#adminForm .jsptickets_form_table > tbody > tr > td{padding:8px 4px;border-bottom:1px solid #ececec !important;}
+#adminForm .jsptickets_form_table > tbody > tr:last-of-type > td {border-bottom:none !important;}
+#adminForm .jsptickets_form_table > tbody > tr > td input[type=text]{background:#fdfaf2;border:1px solid #e4e4e4;width:40.5%;padding:5px;height:auto;margin:0;}
+#adminForm .jsptickets_form_table > tbody > tr > td select{background:#fdfaf2;border:1px solid #e4e4e4;width:40%;padding:5px;height:auto;margin:0;}
+#adminForm .jsptickets_form_table > tbody > tr > td select#category_id{height:auto;}
+#adminForm .jsptickets_form_table > tbody > tr > td > a,
+#adminForm .jsptickets_form_table > tbody > tr > td > a:hover,
+#adminForm .jsptickets_form_table > tbody > tr > td > a:visited,
+#adminForm .jsptickets_form_table > tbody > tr > td > a:focus{color:#3399ff;background:none;text-decoration:none;}
+
+
+/*Pagination*/	
+#adminForm .jsptickets_form_table ul{list-style:none;padding:0;margin:10px 0 0;text-align: center;}
+#adminForm .jsptickets_form_table ul > li{display:inline-block;padding:2px 6px;background:url(../images/black-btn-bg.png) repeat-x #060606 !important;;margin:0 2px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+#adminForm .jsptickets_form_table ul > li > a{color:#3399ff;background:none;text-decoration:none;}
+#adminForm .jsptickets_form_table ul > li > span{color:#fff}
+#adminForm .jsptickets_form_table ul > li.pagination-next a,
+#adminForm .jsptickets_form_table ul > li.pagination-prev a,
+#adminForm .jsptickets_form_table ul > li.pagination-end a,
+#adminForm .jsptickets_form_table ul > li.pagination-start a{color:#fff;}
+
+#adminForm .jsp-filtering > div {/* float:right; */margin:0 0 3px 3px; display:none;}
+
+
+
+/*MEDIA QUERIES*/
+
+
+
+
+/*Tablet landscape (1024x768)*/
+@media screen and (max-width: 1024px) {
+	#adminForm .nav-collapse,#adminForm .nav-collapse.collapse {height: auto;overflow:visible;}
+	#adminForm .nav-collapse{clear:none;}
+		
+}
+
+/*Small tablet landscape (800x600)*/
+@media screen and (max-width: 800px) {
+		
+}
+
+/*Tablet portrait (768x1024)*/
+@media screen and (max-width: 768px) {
+	/*.data-grid .serial-video-section h2 {text-align: left;}*/
+		
+}
+
+
+/*Small tablet portrait (600x800)*/
+@media screen and (max-width: 600px) {
+#adminForm .filter-search{float:none;}
+#adminForm .jsptickets_toolbar_grid{float:none;width:100%;text-align:center;display:block;}
+#adminForm .jsptickets_toolbar_grid_togglebtn{display: inline-block;float: right;padding:2px 10px 3px;}
+#adminForm .nav-collapse,#adminForm .nav-collapse.collapse {height: 0;overflow: hidden;}
+#adminForm .jsp-filtering > div{float:none;width:100% !important;}
+#adminForm .jsptickets_toolbar_grid .btn-grid{float:none;}
+#adminForm input.black-btn,#adminForm input.orange-btn{width:100%;display:block;margin:1px 0;}
+#adminForm .jsptickets_toolbar_grid.form input.black-btn, #adminForm .jsptickets_toolbar_grid.form input.orange-btn{width:auto;margin: 0 0 0 3px;}
+}
+
+#adminForm .adminlist .toggle-editor,#adminForm .admintable .toggle-editor {float:none !important;}/*Toogle Editor Button Float issue*/
+
+/*Mobile landscape (480x320)*/
+@media screen and (max-width: 480px) {
+
+}
+
+/*Mobile portrait (320x480)*/
+@media screen and (max-width: 320px) {
+		
+}
+
+/*CSS Added by Sameer on 25 Feb, 2014*/
+#adminForm table.ticket-table tr td{max-width:190px;}
+#adminForm table.align-left thead th{text-align:left;}
+#adminForm table.ticket-table tbody td,table.adminlist thead th{padding:4px 6px;border:none;/*border: 1px solid rgb(242, 242, 242); */ text-align:left;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;font-size: 14px;
+}
+.adminlist td a.view_log_btn{display:inline-block;}
+
+.btn-toolbar .btn{
+
+padding:4px !important;
+
+}
+
+table th{
+background-color:#ffffff !important;
+
+}
+.button:active, .button:focus, button:hover{background-image:none !important;}
+ .form-validate .table-scroll table th {background-color:#ffffff !important; background-image:none !important;}
+ .form-validate .table-scroll table th a.hasTooltip{color:#08c !important;}
+  .form-validate .table-scroll  table th a:link{color:#08c !important;}
+ .form-validate .table-scroll  table th {color:#08c !important;}
+ table th a:link, table th a:visited{color:#08c !important;}
+ .form-validate .table-scroll  table th a:hover, a:focus {background:none !important;}
+ .nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus{color: #fff !important;
+  background-color: #08c !important;}
+ .tab-pane table th {background-color:#ffffff !important; background-image:none !important;}
+ .tab-pane table th {color:#000 !important;}
+ .jsptickets_toolbar_grid .btn-group  .btn{color:#ffffff !important;}
+ 
+ span.pagenav{
+ background: none !important;
+ color:#000;
+ 
+ }
+ 
+
+
+.danger{
+background:#DB0000 !important;
+}
+
+.success{
+background:#006400 !important;
+}
+
+.info{
+background:#736F6E !important;
+}
+
+.warning{
+background:#FF6600 !important;
+}
+
+#jform_fltr_priority  {
+display:block !important;
+float:left;
+}
+
+#jform_fltr_type{
+display:block !important;
+float:left;
+}
+
+#jform_fltr_category{
+display:block !important;
+float:left;
+}
+
+#jform_fltr_follow_up{
+display:block !important;
+float:left;
+}
+#jform_fltr_status{
+display:block !important;
+float:left;
+}
+#limit{
+display:block !important;
+float:left;
+}
+
+.input-medium{
+width:213px !important;
+
+}
+
+a:hover, a:active, a:focus {background:none !important;}
+#adminForm table.ticket-table tbody td  a:link, #adminForm table.ticket-table tbody td  a:visited,  #adminForm table.ticket-table tbody td a:hover,#adminForm table.ticket-table tbody td  a:active,#adminForm table.ticket-table tbody td a:focus {color:#08c !important;  text-decoration: none;}
+body #adminForm .nav-pills > li > a {border-radius: 5px;text-decoration:none;}
+
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus{
+  color: #08c !important;
+  cursor: default !important;
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  border-bottom-color: transparent !important;
+  font-size:17px !important;	
+  text-decoration:none !important;
+}
+
+a:link, a:visited{
+color:#08c !important;
+  text-decoration:none !important;
+}
+
+label.invalid, label.required span{
+color:#333333 !important;
+}
+
+.pagination-start span.pagenav, .pagination-prev span.pagenav, .pagination-end span.pagenav, .pagination-next span.pagenav {
+float:left;
+}
+span.pagenav{
+border:none !important;
+border-left:none !important;
+
+}
+.table-scroll li{float:left;  padding: 0 14px;
+  margin: 0;
+  line-height: 1.9em;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  display: inline-block;}
+  .table-bordered { border-left: 1px solid  #ddd !important;}
+
+  select{  padding: 5px 6px !important;}
+/* .table-scroll .ticket-table .row0>th{  background-color: #BAE6FC !important;} */
+
+
+/* .table-scroll .ticket-table .row0>th{  background-color: #d1ecf9 !important;} */
+
+.table-scroll .ticket-table .row0>th{  background-color: #B6EAF5 !important;
+border-bottom:2px solid #97DEE2 !important;
+
+}
+   

@@ -1,0 +1,3 @@
+.jsp_pagination_bar ul {text-align:center;float:left;}
+.jsp_pagination_bar li{display:inline-block;margin:12px 2px 0;}
+#adminForm .jsp_pagination_bar li a,.jsp_pagination_bar li{color:#000 !important;}

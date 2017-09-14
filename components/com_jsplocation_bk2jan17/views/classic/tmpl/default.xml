@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JLOCATOR_JLOCATOR_VIEW_DEFAULT_TITLE" option="COM_JLOCATOR_JLOCATOR_VIEW_DEFAULT_OPTION">
+		<message>
+			<![CDATA[COM_JLOCATOR_JLOCATOR_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+        <fieldset name="params" label="JSP_LOCATION_PARAMS">
+		
+		<field name="menu_templates" type="Folderlist" default="default" label="MENU_DEFAULT_TEMPLATE" description="MENU_DEFAULT_TEMPLATE_DESC" directory="../components/com_jsplocation/views" filter="" exclude="" stripext="" ></field>
+		
+		<field name="map_location" type="sql" default="0" label="DEFAULT_MAP_LOCATION" query="SELECT id AS id, branch_name AS title FROM #__jsplocation_branch WHERE published = 1 ORDER BY branch_name ASC" key_field="id" value_field="title" description="DEFAULT_MAP_LOCATION_DESCRIPTION_MENU_PARAM">
+		<option value="0">USE GLOBAL</option>
+		</field>
+
+		<field name="cat_default" type="sql" default="0" label="DEFAULT_MAP_CATEGORY" query="SELECT id AS id, title AS title FROM #__jsplocation_category WHERE published = 1 ORDER BY title ASC" key_field="id" value_field="title" description="DEFAULT_MAP_CATEGORY_DESC">
+		<option value="0">- None Selected -</option>
+		</field>
+				
+		<field type="spacer" name="spacer0" label="&lt;b&gt; Default Settings : &lt;/b&gt;" />
+          
+        <field name="map_title" type="text" default="" label="MAP_TITLE" description="MAP_TITLE" />		  
+			
+		<field name="show_maptitle" type="list" default="2" label="DISPLAY_MAP_TITLE" description="DISPLAY_MAP_TITLE">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+			
+		<field name="directions" type="list" default="2" label="DISPLAY_DIRECTIONS" description="DISPLAY_DIRECTIONS">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>	
+		
+		<field name="direction_range" type="list" default="2" label="DIRECTION_RANGE" description="DIRECTION_RANGE_DESCRIPTION">
+			<option value="0">KM</option>
+			<option value="1">Miles</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+			
+		<field name="location_list" type="list" default="2" label="DISPLAY_BRANCH_LIST" description="DISPLAY_BRANCH_LIST_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+			
+	    <field name="country_name" type="list" default="2" label="DISPLAY_COUNTRY" description="DISPLAY_COUNTRY_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+			
+		<field name="state_name" type="list" default="2" label="DISPLAY_STATE" description="DISPLAY_STATE_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="city_name" type="list" default="2" label="DISPLAY_CITY" description="DISPLAY_CITY_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="area_name" type="list" default="2" label="DISPLAY_AREA" description="DISPLAY_AREA_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="dispdefimg" type="list" default="2" label="DISPLAY_IMAGE" description="DISPLAY_IMAGE_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		<field name="show_pointer_type" type="list" default="2" label="DISPLAY_POINTER_TYPE" description="DISPLAY_POINTER_TYPE_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		<field type="spacer" name="spacer1" label="&lt;b&gt; Search Settings : &lt;/b&gt;" />
+		
+		<field name="enable_search" type="list" default="2" label="DISPLAY_SEARCH_FIELDS" description="DISPLAY_SEARCH_FIELDS_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="zip_search" type="list" default="2" label="SHOW_ZIP_SEARCH_FIELD" description="SHOW_ZIP_SEARCH_FIELD_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="radius_range" type="list" default="2" label="RADIUS_RANGE" description="RADIUS_RANGE_DESCRIPTION">
+			<option value="0">KM</option>
+			<option value="1">Miles</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="category_dropdown" type="list" default="2" label="SHOW_CATEGORY_FIELD" description="SHOW_CATEGORY_FIELD_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+	<!--	<field name="country_dropdown" type="list" default="2" label="SHOW_COUNTRY_FIELD" description="SHOW_COUNTRY_FIELD_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="state_dropdown" type="list" default="2" label="SHOW_STATE_FIELD" description="SHOW_STATE_FIELD_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="city_dropdown" type="list" default="2" label="SHOW_CITY_FIELD" description="SHOW_CITY_FIELD_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		<field name="area_dropdown" type="list" default="2" label="SHOW_AREA_FIELD" description="SHOW_AREA_FIELD_DESCRIPTION">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		
+		-->
+		
+		<field name="locateme" type="list" default="2" label="DISPLAY_LOCATE_ME" description="DISPLAY_LOCATE_ME_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+			<option value="2">USE GLOBAL</option>
+		</field>
+		<field name="locateme_radius" type="list" default="0" label="LOCATE_ME_RADIUS" description="RADIUS_FOR_LOCATE_ME">
+		    <option value="0">USE GLOBAL</option>
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+			<option value="2000">2000</option>
+		</field>
+        </fieldset>
+</fields>
+</metadata>

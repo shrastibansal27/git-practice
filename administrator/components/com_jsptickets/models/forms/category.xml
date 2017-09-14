@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="details"
+			addfieldpath="/administrator/components/com_jsptickets/models/fields"
+		>
+			<field name="id"
+				type="hidden"
+				label="CATEGORY_ID_LABEL"
+				description="CATEGORY_ID_DESC"
+				size="30"
+				default="0"
+				readonly="true"
+				class="readonly"
+			/>
+			
+			<field name="title"
+				type="text"
+				label="CATEGORY_TITLE_LABEL"
+				description="CATEGORY_TITLE_DESC"
+				size="30"
+				class="required"
+				aria-required="true"
+				required="true"
+			/>
+			
+			<field name="alias"
+				type="text"
+				label="CATEGORY_ALIAS_LABEL"
+				description="CATEGORY_ALIAS_DESC"
+				class="inputbox"
+				size="30"
+			/>
+			
+			<field name="published"
+				type="list"
+				default="1"
+				label="CATEGORY_PUBLISH_LABEL"
+				description="CATEGORY_PUBLISH_DESC">
+				<option value="0">Unpublished</option>
+				<option value="1">Published</option>
+			</field>
+			
+			<field name="parent_id"
+				type="categoryedit"
+				extension="com_jsptickets"
+				label="CATEGORY_PARENT_LABEL"
+				description="CATEGORY_PARENT_DESC"
+				class="inputbox"
+			>
+				<option value="1">-No Parent-</option>
+			</field>
+			
+			<!--<field name="description"
+				type="editor"
+				default=""
+				label="CATEGORY_DESCRIPTION_LABEL"
+				description="CATEGORY_DESCRIPTION_DESC"
+				width="350"
+				filter="safehtml"
+			/>-->
+			
+			<field name="image" 
+				type="file" 
+				label="CATEGORY_IMAGE_LABEL" 
+				description="CATEGORY_IMAGE_DESC" 
+				size="30" 
+				accept="image/*" 
+			/>
+			
+			<field name="assigned_to" 
+				type="usergroup" 
+				label="CATEGORY_ASSIGNED_TO_LABEL" 
+				description="CATEGORY_ASSIGNED_TO_DESC"
+				multiple="multiple"
+				class="required"
+				aria-required="true"
+				required="true"
+			/>
+			
+		</fieldset>
+</form>

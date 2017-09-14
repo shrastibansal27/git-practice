@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_jsptickets/models/fields"
+	>
+		<field name="id"
+				type="hidden"
+				label="TICKET_ID_LABEL"
+				description="TICKET_ID_DESC"
+				size="30"
+				default="0"
+				readonly="true"
+				class="readonly"
+			/>
+		
+		<field name="title"
+				type="text"
+				label="TICKET_TITLE_LABEL"
+				description="TICKET_TITLE_DESC"
+				size="30"
+				class="required"
+				aria-required="true"
+				required="true"
+			/>
+			
+			<field name="subject"
+				type="text"
+				label="TICKET_SUBJECT_LABEL"
+				description="TICKET_SUBJECT_DESC"
+				size="80"
+				maxlength="200" 
+				class="required"
+				aria-required="true"
+				required="true"
+			/>
+			
+		<field name="category_extension"
+				type="sql"
+				default="Select Extension"
+				label="TICKET_CATEGORY_EXTENSION_LABEL"
+				description="TICKET_CATEGORY_EXTENSION_DESC" 
+				query="SELECT id, extension FROM #__categories GROUP BY extension"
+				key_field="extension"
+				value_field="extension"
+				class="required"
+				aria-required="true"
+				required="true"
+				onchange="showCategoriesAdmin(this.value)"
+		/>
+			
+		<!--<field name="category_id"
+				type="list"
+				default=""
+				label="TICKET_CATEGORY_LABEL"
+				description="TICKET_CATEGORY_DESC" 
+				multiple="true"
+				required="true"
+		/>-->
+			
+		<field name="priority"
+				type="sql"
+				default="Select Priority"
+				label="TICKET_PRIORITY"
+				description="TICKET_PRIORITY_DESC" 
+				query="SELECT id, name FROM #__jsptickets_priorities WHERE PUBLISH LIKE 1"
+				key_field="id"
+				value_field="name"
+				class="required"
+				aria-required="true"
+				required="true"
+		/>
+			
+		<field name="status"
+				type="sql"
+				default="Select Status"
+				label="TICKET_STATUS"
+				description="TICKET_STATUS_DESC" 
+				query="SELECT id, name FROM #__jsptickets_status WHERE PUBLISH LIKE 1"
+				key_field="id"
+				value_field="name"
+				class="required"
+				aria-required="true"
+				required="true"
+		/>
+		
+		<field name="attachment" 
+				type="file" 
+				label="TICKET_ATTACHMENT_LABEL" 
+				description="TICKET_ATTACHMENT_DESC" 
+				size="30" 
+				accept="*" 
+		/>
+		
+		<field name="created_for" 
+				type="user" 
+				label="TICKET_CREATED_FOR_LABEL" 
+				description="TICKET_CREATED_FOR_DESC"
+				multiple="multiple"
+				class="required"
+				aria-required="true"
+				required="true"
+		/>
+		
+		<field name="assigned_to" 
+				type="user" 
+				label="TICKET_ASSIGNED_TO_LABEL" 
+				description="TICKET_ASSIGNED_TO_DESC"
+				multiple="multiple"
+				class="required"
+				aria-required="true"
+				required="true"
+		/>
+		
+		<field name="email_comment"
+				type="checkbox"
+				label="TICKET_EMAIL_COMMENT"
+				description="TICKET_EMAIL_COMMENT_DESC"
+				value="1"
+		/>
+		
+		<field name="ratings"
+				type="list"
+				default="3"
+				label="TICKET_RATING_LABEL"
+				description="TICKET_RATING_DESC">
+		<option value="1">RATING1</option>
+		<option value="2">RATING2</option>
+		<option value="3">RATING3</option>
+		<option value="4">RATING4</option>
+		<option value="5">RATING5</option>
+		</field>
+		
+		<field name="fltr_type"
+				class="input-medium"
+				type="list"
+				default=""
+				label="TICKET_TYPE"
+				description="TICKET_TYPE_DESC" 
+				onchange="this.form.submit()"
+		>
+		<option value="">JOPTION_SELECT_TYPE</option>
+		<option value="1">SYSTEM</option>
+		<option value="2">FACEBOOK</option>
+		<option value="3">TWITTER</option>
+		</field>
+		
+		<field name="fltr_category"
+				class="input-medium"
+				type="sql"
+				default=""
+				label="TICKET_CATEGORY_EXTENSION_LABEL"
+				description="TICKET_CATEGORY_EXTENSION_DESC" 
+				query="SELECT `id`, `extension`, CONCAT(UPPER(SUBSTRING(replace(`extension`, 'com_', ''), 1, 1)),LOWER(SUBSTRING(replace(`extension`, 'com_', ''), 2))) AS `name` FROM `#__categories` GROUP BY `extension`"
+				key_field="extension"
+				value_field="name"
+				onchange="this.form.submit()"
+		>
+		<option value="">JOPTION_SELECT_CATEGORY_EXTENSION</option>
+		</field>
+		
+		<field name="fltr_priority"
+				class="input-medium"
+				type="sql"
+				default=""
+				label="TICKET_PRIORITY"
+				description="TICKET_PRIORITY_DESC" 
+				query="SELECT id, name FROM #__jsptickets_priorities WHERE PUBLISH LIKE 1"
+				key_field="id"
+				value_field="name"
+				onchange="this.form.submit()"
+		>
+		<option value="">JOPTION_SELECT_PRIORITY</option>
+		</field>
+		
+		<field name="fltr_status"
+				class="input-medium"
+				type="sql"
+				default=""
+				label="TICKET_STATUS"
+				description="TICKET_STATUS_DESC" 
+				query="SELECT id, name FROM #__jsptickets_status WHERE PUBLISH LIKE 1"
+				key_field="id"
+				value_field="name"
+				onchange="this.form.submit()"
+		>
+		<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+		
+		<field name="fltr_assigned_to"
+				class="input-medium"
+				type="sql"
+				default=""
+				label="TICKET_ASSIGNED_TO_LABEL"
+				description="TICKET_ASSIGNED_TO_DESC" 
+				query="SELECT id, username FROM #__users"
+				key_field="id"
+				value_field="username"
+				onchange="this.form.submit()"
+		>
+		<option value="">SELECT_ASSIGNED_USER</option>
+		</field>
+		
+		<field name="fltr_follow_up"
+				class="input-medium"
+				type="list"
+				default=""
+				label="TICKET_FOLLOW_UP_LABEL"
+				description="TICKET_FOLLOW_UP_DESC" 
+				onchange="this.form.submit()"
+		>
+		<option value="">SELECT_FOLLOW_UP</option>
+		<option value="0">UNFOLLOW</option>
+		<option value="1">FOLLOW_UP</option>
+		</field>
+	</fieldset>
+</form>

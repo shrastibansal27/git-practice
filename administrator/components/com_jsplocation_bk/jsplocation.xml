@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+       <name>JSP Location</name>
+	<author>Ajay Lulia</author>
+	<authorEmail>ajay.lulia@joomlaserviceprovider.com</authorEmail>
+	<creationDate>2011-08-20</creationDate>
+	<copyright>This component is released under the GNU/GPL License</copyright>
+	<authorUrl>www.joomlaserviceprovider.com</authorUrl>
+	<version>2.2</version>
+ 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<description>JSP Location Component installation successful.</description>
+	<scriptfile>script.php</scriptfile>       
+    <install> <!-- Runs on install -->
+			<sql>
+					 <file charset="utf8" driver="mysql">sql/install.sql</file>
+			</sql>
+	</install>
+       	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>jsplocation.php</filename>
+		<filename>router.php</filename>
+		<folder>language</folder>
+		<folder>views</folder>
+		<folder>helpers</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>models</folder>
+		<folder>scripts</folder>
+	</files>
+<languages folder="site/language">
+  <language tag="en-GB">en-GB.com_jsplocation.ini</language>
+  <language tag="en-GB">en-GB.plg_content_jsplocation.ini</language>
+</languages>
+	<administration>
+		<menu img="components/com_jsplocation/images/menu_list_icons/jsplocation_icon_16x16.png">COM_JSPLOCATION</menu>
+		<submenu>
+		  <menu task="branch" img="components/com_jsplocation/images/menu_list_icons/branch_icon_16x16.png" alt="LOCATIONS">LOCATIONS</menu>
+		  <menu task="fields" img="components/com_jsplocation/images/menu_list_icons/fields_icon_16x16.png" alt="FIELDS_LIST">FIELDS_LIST</menu>
+		  <menu task="country" img="components/com_jsplocation/images/menu_list_icons/country_icon_16x16.png" alt="COUNTRY_LIST">COUNTRY_LIST</menu>
+		  <menu task="state" img="components/com_jsplocation/images/menu_list_icons/state_icon_16x16.png" alt="STATE_LIST">STATE_LIST</menu>
+		  <menu task="city" img="components/com_jsplocation/images/menu_list_icons/city_icon_16x16.png" alt="CITY_LIST">CITY_LIST</menu>
+		  <menu task="area" img="components/com_jsplocation/images/menu_list_icons/area_icon_16x16.png" alt="AREA_LIST">AREA_LIST</menu>
+		  <menu task="category" img="components/com_jsplocation/images/menu_list_icons/area_icon_16x16.png" alt="CATEGORY_LIST">CATEGORY_LIST</menu>
+		 <menu task="googleplaces" img="components/com_jsplocation/images/menu_list_icons/area_icon_16x16.png" alt="CATEGORY_LIST">GOOGLE_PLACES</menu>
+		  <menu task="configuration" img="components/com_jsplocation/images/menu_list_icons/configuration_icon_16x16.png" alt="CONFIGURATION">CONFIGURATION</menu>
+		  <menu task="brgraph" img="components/com_jsplocation/images/menu_list_icons/branchhitgraphs-j3.png" alt="BRGRAPH">BRANCHHIT_GRAPHS</menu>
+		  <menu task="zipgraph" img="components/com_jsplocation/images/menu_list_icons/ziphitgraphs-j3.png" alt="ZIPGRAPH">ZIPHIT_GRAPHS</menu>
+		</submenu>
+		<files folder="admin">
+			<folder>views</folder>
+			<folder>tables</folder>
+			<folder>sql</folder>
+			<folder>models</folder>
+			<folder>language</folder>
+			<folder>js</folder>
+			<folder>images</folder>
+			<folder>helpers</folder>
+			<folder>css</folder>
+			<folder>controllers</folder>
+			<folder>samplefiles</folder>
+			<folder>locationlogs</folder>
+			<folder>locationpath</folder>
+			<filename>index.html</filename>
+			<filename>jsplocation.php</filename>
+			<filename>controller.php</filename>	
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_jsplocation.ini</language>
+			<language tag="en-GB">en-GB.com_jsplocation.sys.ini</language>
+			<language tag="en-GB">en-GB.plg_content_jsplocation.ini</language>
+		</languages>
+        </administration>
+		<media destination="../images/jsplocationimages" folder="jsplocationimages/">
+			<filename>index.html</filename>
+			<filename>camera.png</filename>
+			<filename>fullscr.png</filename>
+			<folder>jsplocationPointers</folder>
+			<folder>jsplocationImages</folder>
+		</media>
+    <modules>
+	<module folder="modules" module="mod_jspLocation" name="jspLocation Module" />
+</modules>
+<plugins>
+	<plugin folder="plugins" plugin="plg_jspLocation" name="Content - Store Locator Plugin" group="content" />
+</plugins>
+<config>
+  <fields name="params">
+   <fieldset name="basic">
+    <field name="version" type="text"
+     default="2.2"
+     description="COM_JSPLOCATION_FIELD_VERSIONINFO_DESC"
+     label="COM_JSPLOCATION_FIELD_VERSIONINFO_LABEL"
+     size="5"
+    />
+   </fieldset>
+  </fields>
+ </config>
+</extension>

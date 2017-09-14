@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/components/com_jsptickets/models/fields"
+	>
+	<field name="new_guestname"
+				type="text"
+				label="TICKET_GUESTNAME_LABEL"
+				description="TICKET_GUESTNAME_DESC"
+				size="30"
+				class="required"
+				aria-required="true"
+				required="true"
+				hint="Enter your name"
+	/>
+	
+	<field name="new_guestemail"
+				type="email"
+				label="TICKET_GUESTEMAIL_LABEL"
+				description="TICKET_GUESTEMAIL_DESC"
+				size="30"
+				class="required"
+				aria-required="true"
+				required="true"
+				hint="Enter your email"
+	/>
+	<!--
+	<field name="guestname"
+				type="text"
+				label="TICKET_GUESTNAME_LABEL"
+				description="TICKET_GUESTNAME_DESC"
+				class="inputbox"
+				size="30"
+				required="true"
+	/>
+	-->
+	
+	<field name="guestemail"
+				type="email"
+				label="TICKET_GUESTEMAIL_LABEL"
+				description="TICKET_SEARCH_GUESTEMAIL_DESC"
+				size="30"
+				class="required"
+				aria-required="true"
+				required="true"
+				hint="Enter your email"
+	/>
+	
+	<field name="ticketid"
+				type="text"
+				label="TICKET_TICKETID_LABEL"
+				description="TICKET_TICKETID_DESC"
+				size="30"
+				class="required"
+				aria-required="true"
+				required="true"
+				hint="Enter the ticket ID"
+	/>
+	</fieldset>
+</form>

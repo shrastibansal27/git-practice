@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="details"
+			addfieldpath="/administrator/components/com_jsptickets/models/fields"
+		>
+			<field name="id"
+				type="hidden"
+				label="CONFIG_ID_LABEL"
+				description="CONFIG_ID_DESC"
+				size="30"
+				default="0"
+				readonly="true"
+				class="readonly"
+			/>
+			
+			<field name="file_upload"
+				type="list"
+				default="0"
+				label="CONFIG_FILE_UPLOAD_LABEL"
+				description="CONFIG_FILE_UPLOAD_DESC"
+				onchange="showfiletype(this.value)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="file_types" 
+				type="textarea" 
+				default="" 
+				label="CONFIG_FILE_TYPES_LABEL" 
+				description="CONFIG_FILE_TYPES_DESC" 
+				rows="10" 
+				cols="5" 
+			/>
+			
+			<field name="load_jquery"
+				type="list"
+				default="0"
+				label="CONFIG_LOAD_JQUERY_LABEL"
+				description="CONFIG_LOAD_JQUERY_DESC">
+				<option value="2">AUTO</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field name="access_control"
+				type="list"
+				default="0"
+				label="CONFIG_ACCESS_CONTROL_LABEL"
+				description="CONFIG_ACCESS_CONTROL_DESC">
+				<option value="0">PUBLIC</option>
+				<option value="1">REGISTERED</option>
+			</field>
+			
+			<field name="cronjob_link"
+				type="text"
+				label="CONFIG_CRONJOB_LINK_LABEL"
+				description="CONFIG_CRONJOB_LINK_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+				readonly="true"
+			/>
+			
+			<field name="filter_option_access" 
+				type="usergroup" 
+				label="CONFIG_FILTER_OPTION_ACCESS_LABEL" 
+				description="CONFIG_FILTER_OPTION_ACCESS_DESC"
+				multiple="multiple"
+				class="required"
+				aria-required="true"
+				required="true"
+			/>
+			
+			<field name="select_category"
+				type="list"
+				default="0"
+				label="CONFIG_SELECT_CATEGORY_LABEL"
+				description="CONFIG_SELECT_CATEGORY_DESC"
+				onchange="showcategory(this.value)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="email_notification"
+				type="list"
+				default="0"
+				label="CONFIG_EMAIL_NOTIFICATION_LABEL"
+				description="CONFIG_EMAIL_NOTIFICATION_DESC"
+				onchange="showAdminEmailId(this.value)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="admin_email_id"
+				type="text"
+				label="TICKET_ADMIN_EMAIL_ID_LABEL"
+				description="TICKET_ADMIN_EMAIL_ID_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="gen_fb_tickets"
+				type="list"
+				default="0"
+				label="CONFIG_GEN_FB_TICKETS_LABEL"
+				description="CONFIG_GEN_FB_TICKETS_DESC"
+				onchange="showfbgen(this.value)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="fb_app_id"
+				type="text"
+				label="CONFIG_FB_APP_ID_LABEL"
+				description="CONFIG_FB_APP_ID_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="fb_app_secret"
+				type="text"
+				label="CONFIG_FB_APP_SECRET_LABEL"
+				description="CONFIG_FB_APP_SECRET_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="fb_page_url"
+				type="text"
+				label="CONFIG_FB_PAGE_URL_LABEL"
+				description="CONFIG_FB_PAGE_URL_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			<field name="socialticket_gen_timeinterval"
+				type="list"
+				default="30"
+				label="GEN_SOCIAL_TICKET_TIME_LBL"
+				description="GEN_SOCIAL_TICKET_TIME_DESC">
+				<option value="30">ONCE_EVERY_THIRTY_MINS</option>
+				<option value="60">ONCE_EVERY_ONE_HOURS</option>
+				<option value="120">ONCE_EVERY_TWO_HOURS</option>
+				<option value="360">ONCE_EVERY_SIX_HOURS</option>
+				<option value="720">ONCE_EVERY_TWELVE_HOURS</option>
+				<option value="1440">ONCE_EVERY_DAY</option>
+				<option value="10080">ONCE_EVERY_WEEK</option>
+				<option value="43200">ONCE_EVERY_MONTH</option>
+				<option value="525600">ONCE_EVERY_YEAR</option>
+			</field>
+			
+			<field name="fb_filter_words"
+				type="textarea"
+				label="CONFIG_FB_FILTER_WORDS_LABEL"
+				description="CONFIG_FB_FILTER_WORDS_DESC"
+				rows="10" 
+				cols="5" 
+			/>
+			
+			<field name="fb_send_mail"
+				type="list"
+				default="0"
+				label="CONFIG_FB_SEND_MAIL_LABEL"
+				description="CONFIG_FB_SEND_MAIL_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="fb_ticket_title"
+				type="text"
+				label="CONFIG_FB_TICKET_TITLE_LABEL"
+				description="CONFIG_FB_TICKET_TITLE_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="fb_ticket_subject"
+				type="text"
+				label="CONFIG_FB_TICKET_SUBJECT_LABEL"
+				description="CONFIG_FB_TICKET_SUBJECT_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="gen_twitter_tickets"
+				type="list"
+				default="0"
+				label="CONFIG_GEN_TWITTER_TICKETS_LABEL"
+				description="CONFIG_GEN_TWITTER_TICKETS_DESC"
+				onchange="showtwittergen(this.value)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="custom_twitter_consumerkey"
+				type="text"
+				label="CONFIG_TWITTER_CONSUMERKEY_LABEL"
+				description="CONFIG_TWITTER_CONSUMERKEY_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="custom_twitter_consumersecret"
+				type="text"
+				label="CONFIG_TWITTER_CONSUMERSECRET_LABEL"
+				description="CONFIG_TWITTER_CONSUMERSECRET_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="custom_twitter_accesstoken"
+				type="text"
+				label="CONFIG_TWITTER_ACCESSTOKEN_LABEL"
+				description="CONFIG_TWITTER_ACCESSTOKEN_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="custom_twitter_accesstoken_secret"
+				type="text"
+				label="CONFIG_TWITTER_ACCESSTOKEN_SECRET_LABEL"
+				description="CONFIG_TWITTER_ACCESSTOKEN_SECRET_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="twitter_screenname"
+				type="text"
+				label="CONFIG_TWITTER_SCREEN_NAME_LABEL"
+				description="CONFIG_TWITTER_SCREEN_NAME_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="twitter_filter_words"
+				type="textarea"
+				label="CONFIG_TWITTER_FILTER_WORDS_LABEL"
+				description="CONFIG_TWITTER_FILTER_WORDS_DESC"
+				rows="10" 
+				cols="5" 
+			/>
+			
+			<field name="twitter_send_mail"
+				type="list"
+				default="0"
+				label="CONFIG_TWITTER_SEND_MAIL_LABEL"
+				description="CONFIG_TWITTER_SEND_MAIL_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="twitter_ticket_title"
+				type="text"
+				label="CONFIG_TWITTER_TICKET_TITLE_LABEL"
+				description="CONFIG_TWITTER_TICKET_TITLE_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="twitter_ticket_subject"
+				type="text"
+				label="CONFIG_TWITTER_TICKET_SUBJECT_LABEL"
+				description="CONFIG_TWITTER_TICKET_SUBJECT_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="category_extension"
+				type="sql"
+				default="Select Extension"
+				label="TICKET_CATEGORY_EXTENSION_LABEL"
+				description="TICKET_CATEGORY_EXTENSION_DESC" 
+				query="SELECT `id`, `extension`, CONCAT(UPPER(SUBSTRING(replace(`extension`, 'com_', ''), 1, 1)),LOWER(SUBSTRING(replace(`extension`, 'com_', ''), 2))) AS `name` FROM `#__categories` GROUP BY `extension`"
+				key_field="extension"
+				value_field="name"
+				multiple="true"
+			/>
+			
+			<field name="status"
+				type="sql"
+				default="Select Status"
+				label="CONFIG_TICKET_STATUS"
+				description="CONFIG_TICKET_STATUS_DESC" 
+				query="SELECT id, name FROM #__jsptickets_status WHERE PUBLISH LIKE 1"
+				key_field="id"
+				value_field="name"
+				class="required"
+				aria-required="true"
+				required="true"
+				multiple="true"
+			/>
+		
+			<field name="mail_subject"
+				type="text"
+				label="CONFIG_MAIL_SUBJECT_LABEL"
+				description="CONFIG_MAIL_SUBJECT_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="mail_body"
+					type="textarea"
+					label="CONFIG_MAIL_BODY_LABEL"
+					description="CONFIG_MAIL_BODY_DESC"
+					rows="10" 
+					cols="5" 
+			/>
+			
+			<field name="ticket_created_msg"
+				type="text"
+				label="CONFIG_TICKET_CREATED_MSG_LABEL"
+				description="CONFIG_TICKET_CREATED_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="ticket_saved_msg"
+				type="text"
+				label="CONFIG_TICKET_SAVED_MSG_LABEL"
+				description="CONFIG_TICKET_SAVED_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="ticket_removed_msg"
+				type="text"
+				label="CONFIG_TICKET_REMOVED_MSG_LABEL"
+				description="CONFIG_TICKET_REMOVED_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="ticket_followup_msg"
+				type="text"
+				label="CONFIG_TICKET_FOLLOWUP_MSG_LABEL"
+				description="CONFIG_TICKET_FOLLOWUP_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="ticket_removefollow_msg"
+				type="text"
+				label="CONFIG_TICKET_REMOVEFOLLOW_MSG_LABEL"
+				description="CONFIG_TICKET_REMOVEFOLLOW_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="ticket_locked_msg"
+				type="text"
+				label="CONFIG_TICKET_LOCKED_MSG_LABEL"
+				description="CONFIG_TICKET_LOCKED_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+			
+			<field name="ticket_checkin_msg"
+				type="text"
+				label="CONFIG_TICKET_CHECKIN_MSG_LABEL"
+				description="CONFIG_TICKET_CHECKIN_MSG_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+			/>
+		</fieldset>
+</form>

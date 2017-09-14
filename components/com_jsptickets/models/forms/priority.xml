@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="details"
+			addfieldpath="/administrator/components/com_jsptickets/models/fields"
+		>
+			<field name="id"
+				type="hidden"
+				label="PRIORITY_ID_LABEL"
+				description="PRIORITY_ID_DESC"
+				size="30"
+				default="0"
+				readonly="true"
+				class="readonly"
+			/>
+			
+			<field name="name"
+				type="text"
+				label="PRIORITY_TITLE_LABEL"
+				description="PRIORITY_TITLE_DESC"
+				class="inputbox"
+				size="30"
+				required="true"
+			/>
+			
+			<field name="publish"
+				type="list"
+				default="1"
+				label="PRIORITY_PUBLISH_LABEL"
+				description="PRIORITY_PUBLISH_DESC">
+				<option value="0">Unpublished</option>
+				<option value="1">Published</option>
+			</field>
+			
+			
+			<!--<field name="description"
+				type="editor"
+				default=""
+				label="PRIORITY_DESCRIPTION_LABEL"
+				description="PRIORITY_DESCRIPTION_DESC"
+				width="350"
+				filter="safehtml"
+			/>-->
+						
+		</fieldset>
+</form>

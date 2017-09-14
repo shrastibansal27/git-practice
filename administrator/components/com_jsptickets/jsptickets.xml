@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.7.0" method="upgrade">
+
+    <name>JSP Tickets</name>
+	<author>Ajay Lulia</author>
+	<authorEmail>ajay.lulia@joomlaserviceprovider.com</authorEmail>
+	<creationDate>2013-10-21</creationDate>
+	<copyright>This component is released under the GNU/GPL License</copyright>
+	<authorUrl>www.joomlaserviceprovider.com</authorUrl>
+	<version>1.1</version>
+	<subscription_cat_id>1</subscription_cat_id>
+ 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+
+	 <!-- The description is optional and defaults to the name -->
+	<description>JSP Tickets Component installation successful.</description>
+	<scriptfile>script.php</scriptfile>       
+    <install> <!-- Runs on install -->
+			<sql>
+				<file charset="utf8" driver="mysql">sql/install.sql</file>
+			</sql>
+	</install>
+	
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>jsptickets.php</filename>
+		<filename>router.php</filename>
+	</files>
+	
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB.com_jsptickets.ini</language>
+	</languages>
+	
+	<administration>
+	<menu img="components/com_jsptickets/images/main_page_icons/jTickets.png">JSP_TICKETS</menu>
+	<submenu>
+		  <menu task="catlist" img="components/com_jsptickets/images/main_page_icons/category_m.png" alt="CATEGORY_MANAGEMENT">CATEGORY_MANAGEMENT</menu>
+		  <menu task="ticketlist" img="components/com_jsptickets/images/main_page_icons/tickets_m.png" alt="TICKETS_MANAGEMENT">TICKETS_MANAGEMENT</menu>
+		  <menu task="statuslist" img="components/com_jsptickets/images/main_page_icons/status_m.png" alt="STATUS_MANAGEMENT">STATUS_MANAGEMENT</menu>
+		  <menu task="prioritylist" img="components/com_jsptickets/images/main_page_icons/priority_m.png" alt="PRIORITY_MANAGEMENT">PRIORITY_MANAGEMENT</menu>
+		  <menu task="config" img="components/com_jsptickets/images/main_page_icons/configuration.png" alt="CONFIGURATION">CONFIGURATION</menu>
+		  <menu task="mail" img="components/com_jsptickets/images/main_page_icons/mailsetting_m.png" alt="MAIL_SETTINGS">MAIL_SETTINGS</menu>
+	</submenu>
+	<files folder="admin">
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>sql</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<filename>access.xml</filename>
+		<filename>jsptickets.php</filename>
+		<filename>config.xml</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+	</files>
+     
+    <languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_jsptickets.ini</language>
+			<language tag="en-GB">en-GB.com_jsptickets.sys.ini</language>
+			<language tag="en-GB">en-GB.plg_system_jsptickets.ini</language>
+	</languages>
+   
+    </administration>
+		
+	<config>
+	  <fields name="params">
+	   <fieldset name="basic">
+		<field name="version" type="text"
+		 default="1.1"
+		 description="COM_JSPTICKETS_FIELD_VERSIONINFO_DESC"
+		 label="COM_JSPTICKETS_FIELD_VERSIONINFO_LABEL"
+		 size="5"
+		/>
+	   </fieldset>
+	  </fields>
+	</config>
+	<plugins>
+		<plugin folder="plugins" plugin="plg_sys_jsptickets" name="JSP Tickets" group="system" />
+	</plugins>
+	<!-- Update servers -->
+    <updateservers>
+        <server type="extension" priority="1" name="jsptickets">http://www.joomlaserviceprovider.com/update_xml/jsptickets.xml</server>
+    </updateservers>	
+</extension>

@@ -1,0 +1,57 @@
+.icon-48-branch_article {
+	background: url(../images/header_icons/branch_management.png) no-repeat scroll 15px 2px !important;
+}
+
+
+.icon-48-fields_article {
+	background: url(../images/header_icons/fields_management.png) no-repeat scroll 15px 2px !important; 
+}
+
+.icon-48-country_article {
+	background: url(../images/header_icons/country_management.png) no-repeat scroll 15px 2px !important; 
+}
+
+.icon-48-state_article {
+	background: url(../images/header_icons/state_management.png) no-repeat scroll 15px 2px !important; 
+}
+
+.icon-48-city_article {
+	background: url(../images/header_icons/city_management.png) no-repeat scroll 15px 2px !important; 
+}
+
+.icon-48-area_article {
+	background: url(../images/header_icons/area_management.png) no-repeat scroll 15px 2px !important; 
+}
+
+.icon-48-configuration_article {
+	background: url(../images/header_icons/jsplocation_configuration.png) no-repeat scroll 15px 2px !important; 
+}
+
+.icon-48-jlocator_article {
+	background: url(../images/header_icons/jsplocation.png) no-repeat scroll 15px 2px !important; 
+}
+.icon-48-br-article {
+	background: url(../images/header_icons/branchhitgraphs-header.png) no-repeat scroll 15px 2px !important; 
+}
+.icon-48-zip-article {
+	background: url(../images/header_icons/ziphitgraphs-header.png) no-repeat scroll 15px 2px !important; 
+}
+#mapCanvas {
+	width: 280px;
+	height: 280px;
+	float: right;
+	position:fixed;
+	bottom:-100px;
+	border: 3px solid #D8D8D8;
+}
+
+#infoPanel {
+	float: right;
+}
+
+#infoPanel div {
+	margin-bottom: 5px;
+}
+
+#show_map{
+}

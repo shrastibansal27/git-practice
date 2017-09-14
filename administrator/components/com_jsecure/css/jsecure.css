@@ -1,0 +1,28 @@
+div.span10 h1.page-title
+{
+background: url(../images/jSecure_icon_48x48.png) no-repeat !important;
+padding-left:6%;
+height:47px;
+}
+
+.table-striped-jsecure td
+{
+background-color: #F9F9F9;
+border: 1px solid #DDDDDD;
+line-height: 18px;
+padding: 8px;
+text-align: left;
+vertical-align: top;
+margin-bottom:5px;
+float:left;
+width:98.5%;
+}
+
+.basic_config_cls
+{
+border: 1px solid #DDDDDD;
+line-height: 18px;
+padding: 8px;
+}
+
+#content .btn-group > .btn { float:left; }

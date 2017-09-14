@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="details"
+			addfieldpath="/administrator/components/com_jsptickets/models/fields"
+		>
+		<field name="id"
+				type="hidden"
+				label="CONFIG_ID_LABEL"
+				description="CONFIG_ID_DESC"
+				size="30"
+				default="0"
+				readonly="true"
+				class="readonly"
+		/>
+		
+		<field name="email_notification"
+				type="list"
+				default="0"
+				label="CONFIG_EMAIL_NOTIFICATION_LABEL"
+				description="CONFIG_EMAIL_NOTIFICATION_DESC"
+				onchange="showAdminEmailId(this.value)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+			
+		<field name="admin_email_id"
+				type="text"
+				label="TICKET_ADMIN_EMAIL_ID_LABEL"
+				description="TICKET_ADMIN_EMAIL_ID_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+		/>
+		<field name="new_mail_subject"
+				type="text"
+				label="NEW_MAIL_SUBJECT_LABEL"
+				description="NEW_MAIL_SUBJECT_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+		/>
+			
+		<field name="new_mail_body"
+				type="textarea"
+				label="NEW_MAIL_BODY_LABEL"
+				description="NEW_MAIL_BODY_DESC"
+				rows="10" 
+				cols="5" 
+		/>
+		
+		<field name="comment_mail_subject"
+				type="text"
+				label="COMMENT_MAIL_SUBJECT_LABEL"
+				description="COMMENT_MAIL_SUBJECT_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+		/>
+			
+		<field name="comment_mail_body"
+				type="textarea"
+				label="COMMENT_MAIL_BODY_LABEL"
+				description="COMMENT_MAIL_BODY_DESC"
+				rows="10" 
+				cols="5" 
+		/>
+		
+		<field name="assignee_changed_mail_subject"
+				type="text"
+				label="ASSIGNEE_CHANGED_MAIL_SUBJECT_LABEL"
+				description="ASSIGNEE_CHANGED_MAIL_SUBJECT_DESC"
+				class="inputbox"
+				size="80"
+				maxlength="200"
+		/>
+			
+		<field name="assignee_changed_mail_body"
+				type="textarea"
+				label="ASSIGNEE_CHANGED_MAIL_BODY_LABEL"
+				description="ASSIGNEE_CHANGED_MAIL_BODY_DESC"
+				rows="10" 
+				cols="5" 
+		/>
+		</fieldset>
+</form>
